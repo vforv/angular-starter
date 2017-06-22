@@ -10,5 +10,11 @@
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true
-  }
+  },
+  "exclude": [
+    "node_modules/*",
+    "src/main.client-aot.ts",
+    "src/main.client-closure.ts",
+    "src/main.server-aot.ts"
+  ]
 }

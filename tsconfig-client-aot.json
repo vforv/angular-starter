@@ -10,5 +10,17 @@
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true
-  }
+  },
+  "compileOnSave": true,
+  "exclude": [
+    "node_modules/*"
+  ],
+  "files": [
+    "src/app/app.client.module.ts",
+    "src/main.client-aot.ts"
+  ],
+  "angularCompilerOptions": {
+   "genDir": "built",
+   "skipMetadataEmit" : true
+ }
 }

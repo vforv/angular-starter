@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "noImplicitAny": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "outDir": "./built"
+  },
+  "angularCompilerOptions": {
+   "genDir": "built",
+   "annotationsAs": "static fields",
+   "annotateForClosureCompiler": true
+ },
+ "files": [
+    "src/app/app.client.module.ts",
+    "src/main.client-closure.ts"
+  ],
+ "exclude": [
+     "vendor",
+     "node_modules",
+     "built",
+     "dist"
+ ]
+}
