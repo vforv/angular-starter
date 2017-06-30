@@ -12,9 +12,14 @@
     "allowSyntheticDefaultImports": true
   },
   "exclude": [
-    "node_modules/*",
-    "src/main.client-aot.ts",
-    "src/main.client-closure.ts",
-    "src/main.server-aot.ts"
+    "../node_modules/*",
+    "./main.client-aot.ts",
+    "./main.client-closure.ts",
+    "./main.server-aot.ts"
+  ],
+  "files": [
+    "src/app/app.server.module.ts",
+    "src/main.server.ts",
+    "src/main.client.ts"
   ]
 }
