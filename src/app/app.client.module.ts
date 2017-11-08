@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
+import { AppRoutingModule } from './app.routing.module';
 
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
-import { AppRoutingModule } from './routes';
-import { AlertModule } from 'ngx-bootstrap/alert';
+import { NgrxModule } from './ngrx/app.ngrx.module';
+import { SharedModule } from './shared/app.shared.module';
+import { ComponentsModule } from './componets/app.components.module';
+
 
 @NgModule({
   imports: [
@@ -13,11 +15,16 @@ import { AlertModule } from 'ngx-bootstrap/alert';
       appId: 'my-app-id'
     }),
     AppRoutingModule,
-    AlertModule.forRoot()
+    HttpModule,
+    NgrxModule,
+    SharedModule,
+    ComponentsModule
   ],
   declarations: [
-    AppComponent, AboutComponent, HomeComponent
+    AppComponent
   ],
-  bootstrap: [ AppComponent ]
+  providers: [
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppClientModule { }

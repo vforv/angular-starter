@@ -4,6 +4,10 @@ import '@angular/platform-browser-dynamic';
 import '@angular/core';
 import '@angular/common';
 
+import '@ngrx/store';
+import '@ngrx/core';
+
+
 // RxJS
 import 'rxjs';
 

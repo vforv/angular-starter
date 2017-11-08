@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { ServerModule } from '@angular/platform-server';
+import { HttpModule } from '@angular/http';
+import { AppRoutingModule } from './app.routing.module';
 
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
-import { AppRoutingModule } from './routes';
-import { HomeComponent } from './home/home.component';
-import { AlertModule } from 'ngx-bootstrap/alert';
+import { NgrxModule } from './ngrx/app.ngrx.module';
+import { SharedModule } from './shared/app.shared.module';
+import { ComponentsModule } from './componets/app.components.module';
 
 @NgModule({
   imports: [
@@ -15,10 +16,15 @@ import { AlertModule } from 'ngx-bootstrap/alert';
     }),
     ServerModule,
     AppRoutingModule,
-    AlertModule.forRoot()
+    HttpModule,
+    NgrxModule,
+    SharedModule,
+    ComponentsModule
   ],
   declarations: [
-    AppComponent, AboutComponent, HomeComponent
+    AppComponent
+  ],
+  providers: [
   ],
   bootstrap: [ AppComponent ]
 })
